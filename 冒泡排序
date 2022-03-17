@@ -1,4 +1,17 @@
+#### 思想：从小到大排序，第一趟，先将无序区的最大的元素移动到列表有序区，第二趟，再从无序区比较出最大元素，移动到有序区。。。，
 def maopao(li):
   for i in range(len(li)-1):
       for j in range(len(li)-i-1):
-          
+      if li[j]>li[j+1]:
+         li[j],li[j+1] = li[j+1],li[j]
+                
+### 优化
+def maopao(li):
+  for i in range(len(li)-1):
+      flag == False # 如果在一趟排序中，没有进行交换，说明该数组已经有序了。
+      for j in range(len(li)-i-1):
+      if li[j]>li[j+1]:
+         li[j],li[j+1] = li[j+1],li[j]
+         flag = True
+  if flag == False:
+     return
