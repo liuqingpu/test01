@@ -1,0 +1,12 @@
+## 从小到大排序, 每次从无序区选择第一个元素,插入到有序区,在插入的时候找到(排序的过程:将元素从小到大插入)自己的位置.
+def insertort(li):
+    # 需要选取 元素的次数
+    for i in range(len(li)):
+        temp = li[i]
+        j=i-1
+        #无序区的第一个元素开始和有序区的元素开始比较.
+        while j>=0 and li[j]>temp:
+            li[j+1]=li[j]
+            j-=1
+        li[j+1]=temp
+        print(li)
