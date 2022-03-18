@@ -1,0 +1,15 @@
+def selet(li):
+    for i in range(len(li)-1):
+        temp = i
+        for j in range(i+1,len(li)):
+            if li[temp] > li[j]:
+                # j+=1
+                # print(j)
+            # else:
+                temp = j
+        li[i],li[temp] = li[temp],li[i]
+        print(li)
+li = [4,5,1,7,9,3,2,6,8]
+
+selet(li)
+
